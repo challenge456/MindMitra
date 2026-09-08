@@ -1,36 +1,259 @@
-This is a [MindMitra](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MindMitra
 
-## Getting Started
+### AI-Powered Cognitive Gaming & Memory Assistance Platform for Elderly Users
 
-First, run the development server:
+> **Remember More. Live Independently. Stay Connected.**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+MindMitra is an AI-powered platform designed to support elderly users through **cognitive engagement, memory assistance, daily reminders, personalized activities, and caregiver connectivity**.
+
+The platform is specifically designed with the **North Eastern Region (NER) of India** in mind, combining multilingual support, culturally familiar content, voice interaction, and offline-first capabilities.
+
+Built for **Smart India Hackathon 2026 — SIH26003**.
+
+---
+
+## Problem
+
+Elderly users experiencing memory difficulties may face challenges with:
+
+* Remembering daily routines, appointments, and important tasks
+* Staying engaged with cognitive activities
+* Navigating complicated digital applications
+* Maintaining connections with family and caregivers
+* Accessing technology in low-connectivity regions
+* Interacting with applications in their preferred language
+
+Caregivers also need a simple way to manage reminders, preserve meaningful memories, and understand activity participation over time.
+
+---
+
+## Our Solution
+
+MindMitra brings these capabilities together into a **single elderly-friendly platform**.
+
+Instead of providing only games or reminders, MindMitra creates a personalized cycle:
+
+**Play → Observe → Adapt → Recommend → Engage → Inform Caregiver**
+
+The system uses activity performance to personalize future cognitive activities while keeping caregivers informed through progressive activity reports.
+
+---
+
+## Key Features
+
+### Adaptive Cognitive Games
+
+A collection of interactive activities covering:
+
+* Memory & matching
+* Attention
+* Pattern recognition
+* Story recall
+* Daily routine sequencing
+* Object categorization
+* Music and tune recognition
+* Puzzles and recreational games
+* Cultural and reminiscence activities
+
+The adaptive engine can modify difficulty based on factors such as **accuracy, completion time, attempts, hints, and previous activity performance**.
+
+### Personalized Memory Assistance
+
+Users can interact with familiar:
+
+* Family members
+* People and places
+* Photos
+* Personal stories
+* Foods
+* Cultural objects
+* Important memories
+
+These can be incorporated into personalized engagement activities.
+
+### NER-Centric Experience
+
+MindMitra incorporates familiar elements from North Eastern India, including:
+
+* Regional landmarks
+* Festivals
+* Food
+* Traditional objects
+* Crafts
+* Instruments
+* Landscapes
+* Cultural imagery
+
+This helps create a more familiar and relatable experience for users.
+
+### Smart Daily Reminders
+
+Reminders can be created for:
+
+* Medicines
+* Meals
+* Hydration
+* Appointments
+* Activities
+* Important tasks
+
+Reminders can include **visual and audio assistance** and optional caregiver escalation.
+
+### Multilingual & Voice Support
+
+The platform supports:
+
+**English · Hindi · Assamese · Manipuri · Bengali · Nepali**
+
+It is designed for simple voice interaction and audio-based instructions to reduce dependence on typing.
+
+### Caregiver Dashboard
+
+Caregivers can access:
+
+* Activity overview
+* Game history
+* Reminder status
+* Memory management
+* Progressive reports
+* Activity trends
+* Safety information
+
+### Progressive Insights
+
+The platform tracks non-clinical activity metrics such as:
+
+* Participation
+* Accuracy
+* Completion time
+* Attempts
+* Difficulty
+* Reminder adherence
+* Activity frequency
+
+This helps caregivers understand engagement patterns over time.
+
+### Optional Safety Support
+
+Caregiver-enabled safety features can include:
+
+* Safe zones
+* Location status
+* Safe-zone alerts
+* Emergency contacts
+
+Location features are optional and designed around consent and privacy.
+
+### Offline-First
+
+Core functionality is designed to remain useful during poor connectivity through:
+
+* Local caching
+* Offline activities
+* Offline reminders
+* Pending activity synchronization
+
+This is particularly relevant for remote and low-connectivity regions.
+
+---
+
+## Elderly-Friendly Design
+
+MindMitra prioritizes accessibility through:
+
+* Large text
+* Large touch targets
+* Simple navigation
+* High contrast
+* Audio guidance
+* Light/Dark themes
+* Adjustable font sizes
+* Reduced visual complexity
+* Tablet-friendly layouts
+
+The visual language is designed to feel **warm, calm, familiar, and trustworthy**, rather than clinical or overwhelming.
+
+---
+
+## Role of AI
+
+AI is used for:
+
+* Personalized activity recommendations
+* Adaptive difficulty
+* Voice assistant interactions
+* Personalized cognitive content
+* Activity summarization
+* Reminiscence experiences
+
+Critical operations such as **authentication, authorization, reminders, validation, and security rules remain deterministic and application-controlled**.
+
+---
+
+## Technology Stack
+
+| Technology                | Purpose                     |
+| ------------------------- | --------------------------- |
+| **Next.js**               | Full-stack web application  |
+| **React**                 | Interactive UI              |
+| **TypeScript**            | Type-safe development       |
+| **Tailwind CSS**          | UI styling                  |
+| **PostgreSQL**            | Database                    |
+| **Prisma**                | Database ORM                |
+| **Auth.js**               | Authentication              |
+| **AI APIs**               | Personalization & assistant |
+| **PWA / Offline Storage** | Offline-first experience    |
+| **Vercel**                | Deployment                  |
+
+---
+
+## How MindMitra Works
+
+```text
+             Elderly User
+                  │
+        ┌─────────┴─────────┐
+        │                   │
+     Activities          Reminders
+        │                   │
+        ▼                   ▼
+   Performance          Daily Routine
+        │
+        ▼
+   Adaptive AI
+        │
+        ▼
+ Personalized
+ Recommendations
+        │
+        ▼
+ Caregiver Dashboard
+        │
+        ▼
+ Progressive Insights
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## SIH 2026
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Problem Statement:** SIH26003
+**Title:** AI-Based Cognitive Gaming and Memory Assistance Platform for Elderly Dementia Patients in North Eastern Region (NER)
 
-## Learn More
+**Organization:** Ministry of Development of North Eastern Region (MDoNER)
+**Category:** Software
+**Team:** **Epoch**
 
-To learn more about MindMitra, take a look at the following resources:
+---
 
-- [MindMitra Documentation](https://nextjs.org/docs) - learn about MindMitra features and API.
-- [Learn MindMitra](https://nextjs.org/learn) - an interactive MindMitra tutorial.
+## Vision
 
-You can check out [the MindMitra GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+MindMitra aims to make technology **more accessible, personal, culturally familiar, and useful for elderly users**, while helping caregivers stay connected and informed.
 
-## Deploy on Vercel
+> **Remember More. Live Independently. Stay Connected.**
 
-The easiest way to deploy your MindMitra app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of MindMitra.
+---
 
-Check out our [MindMitra deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Responsible Use
+
+MindMitra is intended for **cognitive engagement, memory assistance, daily organization, and caregiver support**. It is not a medical diagnostic or treatment system.
