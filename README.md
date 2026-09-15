@@ -254,6 +254,6 @@ MindMitra aims to make technology **more accessible, personal, culturally famili
 
 ---
 
-### Responsible Use
+## Responsible Use
 
 MindMitra is intended for **cognitive engagement, memory assistance, daily organization, and caregiver support**. It is not a medical diagnostic or treatment system.
