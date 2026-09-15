@@ -9,20 +9,7 @@ datasource db {
 enum UserRole {
   ELDER
   CAREGIVER
-  GOVERNMENT_ADMIN
   ADMIN
-}
-
-enum ProgramStatus {
-  DRAFT
-  ACTIVE
-  PAUSED
-  COMPLETED
-}
-
-enum ExportFormat {
-  CSV
-  PDF
 }
 
 enum RelationshipStatus {
@@ -98,106 +85,6 @@ model User {
   emergencyContacts EmergencyContact[]
   notifications     Notification[]
   voiceMessages     VoiceMessage[]          @relation("VoiceMessageCreator")
-  governmentAdmin   GovernmentAdmin?
-  enrollments       ProgramEnrollment[]
-  auditLogs         AuditLog[]
-  reportExports     ReportExport[]
-}
-
-model Organization {
-  id        String              @id @default(cuid())
-  name      String
-  createdAt DateTime            @default(now())
-  updatedAt DateTime            @updatedAt
-  programs  GovernmentProgram[]
-  admins    GovernmentAdmin[]
-}
-
-model GovernmentProgram {
-  id                 String              @id @default(cuid())
-  organizationId     String
-  name               String
-  description        String?
-  status             ProgramStatus       @default(DRAFT)
-  startsAt           DateTime?
-  endsAt             DateTime?
-  supportedLanguages String[]
-  enabledGameSlugs   String[]
-  reminderCategories String[]
-  createdAt          DateTime            @default(now())
-  updatedAt          DateTime            @updatedAt
-  organization       Organization        @relation(fields: [organizationId], references: [id], onDelete: Cascade)
-  regions            ProgramRegion[]
-  enrollments        ProgramEnrollment[]
-  auditLogs          AuditLog[]
-  reportExports      ReportExport[]
-
-  @@index([organizationId, status])
-}
-
-model ProgramRegion {
-  id        String            @id @default(cuid())
-  programId String
-  state     String
-  district  String?
-  createdAt DateTime          @default(now())
-  program   GovernmentProgram @relation(fields: [programId], references: [id], onDelete: Cascade)
-
-  @@unique([programId, state, district])
-  @@index([state])
-}
-
-model ProgramEnrollment {
-  id         String            @id @default(cuid())
-  programId  String
-  userId     String
-  region     String
-  district   String?
-  enrolledAt DateTime          @default(now())
-  program    GovernmentProgram @relation(fields: [programId], references: [id], onDelete: Cascade)
-  user       User              @relation(fields: [userId], references: [id], onDelete: Cascade)
-
-  @@unique([programId, userId])
-  @@index([programId, region])
-}
-
-model GovernmentAdmin {
-  id             String       @id @default(cuid())
-  userId         String       @unique
-  organizationId String
-  createdAt      DateTime     @default(now())
-  user           User         @relation(fields: [userId], references: [id], onDelete: Cascade)
-  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
-
-  @@index([organizationId])
-}
-
-model AuditLog {
-  id        String             @id @default(cuid())
-  actorId   String?
-  programId String?
-  action    String
-  resource  String
-  metadata  Json?
-  createdAt DateTime           @default(now())
-  actor     User?              @relation(fields: [actorId], references: [id], onDelete: SetNull)
-  program   GovernmentProgram? @relation(fields: [programId], references: [id], onDelete: SetNull)
-
-  @@index([programId, createdAt])
-}
-
-model ReportExport {
-  id            String            @id @default(cuid())
-  requestedById String
-  programId     String
-  format        ExportFormat
-  periodStart   DateTime
-  periodEnd     DateTime
-  createdAt     DateTime          @default(now())
-  requestedBy   User              @relation(fields: [requestedById], references: [id], onDelete: Cascade)
-  program       GovernmentProgram @relation(fields: [programId], references: [id], onDelete: Cascade)
-
-  @@index([programId, createdAt])
 }
 
 model Profile {
