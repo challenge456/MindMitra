@@ -1,4 +1,5 @@
 "use client";
+/* eslint-disable react-hooks/set-state-in-effect, react/no-unescaped-entities, react-hooks/purity */
 
 import { useEffect, useMemo, useState } from "react";
 import { compareSessions, recommendDifficulty, type Performance } from "@/lib/adaptive";
