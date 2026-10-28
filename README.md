@@ -12,7 +12,7 @@ Built for **Smart India Hackathon 2026 — SIH26003**.
 
 ---
 
-## Problem
+## Problems
 
 Elderly users experiencing memory difficulties may face challenges with:
 
